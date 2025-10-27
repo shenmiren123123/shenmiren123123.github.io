@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>YADI SANG 的炫酷主页</title>
+    <style>
+        /* 全局样式 */
+        * { margin: 0; padding: 0; box-sizing: border-box; }
+        html, body { height: 100%; font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; scroll-behavior: smooth; }
+
+        /* 动态背景 */
+        body {
+            background: linear-gradient(-45deg, #1e3c72, #2a5298, #1e3c72, #2a5298);
+            background-size: 400% 400%;
+            animation: gradientBG 15s ease infinite;
+            color: #fff;
+        }
+        @keyframes gradientBG {
+            0% {background-position: 0% 50%;}
+            50% {background-position: 100% 50%;}
+            100% {background-position: 0% 50%;}
+        }
+
+        /* 顶部头部 */
+        header {
+            text-align: center;
+            padding: 80px 20px 40px 20px;
+        }
+        header h1 {
+            font-size: 3em;
+            text-shadow: 2px 2px 8px rgba(0,0,0,0.5);
+        }
+        header p {
+            font-size: 1.2em;
+            margin-top: 10px;
+            text-shadow: 1px 1px 5px rgba(0,0,0,0.5);
+        }
+
+        /* 导航栏 */
+        nav {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-bottom: 50px;
+            flex-wrap: wrap;
+        }
+        nav a {
+            text-decoration: none;
+            color: #fff;
+            font-weight: bold;
+            padding: 10px 25px;
+            border: 2px solid #fff;
+            border-radius: 30px;
+            transition: all 0.3s ease;
+        }
+        nav a:hover {
+            background-color: #fff;
+            color: #1e3c72;
+            transform: scale(1.1);
+        }
+
+        /* 主内容区 */
+        main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            gap: 50px;
+            padding: 0 20px;
+        }
+        .card {
+            background-color: rgba(255,255,255,0.1);
+            padding: 30px;
+            border-radius: 20px;
+            width: 100%;
+            max-width: 800px;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+            transition: transform 0.3s ease;
+        }
+        .card:hover { transform: translateY(-10px); }
+        h2 { margin-bottom: 15px; border-bottom: 2px solid #fff; display: inline-block; }
+
+        ul { list-style: none; }
+        ul li { margin-bottom: 10px; }
+
+        /* 页脚 */
+        footer {
+            text-align: center;
+            padding: 30px 20px;
+            margin-top: 50px;
+            font-size: 14px;
+            color: #ccc;
+        }
+
+        /* 响应式 */
+        @media (max-width: 600px) {
+            nav { gap: 15px; }
+            nav a { padding: 8px 18px; font-size: 0.9em; }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 顶部 -->
+    <header>
+        <h1>YADI SANG 的炫酷主页</h1>
+        <p>分享学习、项目与生活的精彩瞬间</p>
+    </header>
+
+    <!-- 导航 -->
+    <nav>
+        <a href="#about">关于我</a>
+        <a href="#projects">项目展示</a>
+        <a href="#contact">联系我</a>
+    </nav>
+
+    <!-- 主内容 -->
+    <main>
+        <div class="card" id="about">
+            <h2>关于我</h2>
+            <p>你好，我是 YADI SANG，热爱技术与创作。我喜欢写代码、搭建网站，也喜欢分享经验和知识。</p>
+        </div>
+
+        <div class="card" id="projects">
+            <h2>项目展示</h2>
+            <ul>
+                <li>个人博客：记录学习笔记和技术文章</li>
+                <li>GitHub Pages 网站：展示个人作品和小工具</li>
+                <li>小工具合集：各种实用工具和脚本</li>
+            </ul>
+        </div>
+
+        <div class="card" id="contact">
+            <h2>联系我</h2>
+            <p>邮箱：<a href="mailto:youremail@example.com" style="color:#fff; text-decoration:underline;">youremail@example.com</a></p>
+            <p>GitHub: <a href="https://github.com/你的用户名" target="_blank" style="color:#fff; text-decoration:underline;">https://github.com/你的用户名</a></p>
+        </div>
+    </main>
+
+    <!-- 页脚 -->
+    <footer>
+        &copy; 2025 YADI SANG. 保留所有权利。
+    </footer>
+
+</body>
+</html>
